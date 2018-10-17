@@ -63,7 +63,7 @@ void determineSort(string text, vector<int>& ints) {
 		print(ints);
 	} else if (!text.compare("qsort")) {
 		qsort(&(ints[0]), ints.size(), sizeof(int), qsortCompare);
-		cout << comparisons << endl;
+		print(ints);
 	} else if (!text.compare("stl")) {
 		sort(ints.begin(), ints.end(), stlSortCompare);
 		print(ints);
@@ -140,11 +140,10 @@ int main(int argc, char* argv[]) {
 					break;
 				}
 			}
-			cout << "input size n: " << integers.size() << endl;
 			determineSort(to_use, integers);
 
 		} else {
-			cerr << "Not a valid method!";
+			cerr << "Not a valid sort method!";
 			return -1;
 		}
 		return EXIT_SUCCESS;

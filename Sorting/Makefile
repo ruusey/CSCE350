@@ -1,10 +1,10 @@
 CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
 
-OBJS =		intsort.o
+OBJS =		sorting.o
 
 LIBS =
 
-TARGET =	intsort.exe
+TARGET =	sorting.exe
 
 $(TARGET):	$(OBJS)
 	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
